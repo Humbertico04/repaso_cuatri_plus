@@ -9,17 +9,18 @@ class Alumno:
 
     def to_dict(self):
         return {'nombre': self.nombre, 'apellido': self.apellido, 'nota': self.nota}
-    
 
-cadena="zeréP nauJ,01"
 
 def obtener_datos(cadena):
     nota, nom_ape=cadena[::-1].split(",")
     nombre, apellido = nom_ape.split(" ")
     return Alumno(nombre, apellido, nota)
 
-alumno = obtener_datos(cadena)
-print(alumno.nombre)
-print(alumno.apellido)
-print(alumno.nota)
-print(alumno)
+
+# cadena="zeréP nauJ,01"
+# Ejemplo = obtener_datos(cadena)
+# print(Ejemplo.nombre)
+# print(Ejemplo.apellido)
+# print(Ejemplo.nota)
+# print(Ejemplo)
+# alumno = obtener_datos(input("Introduce el nombre del archivo: "))
