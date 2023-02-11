@@ -15,12 +15,3 @@ def obtener_datos(cadena):
     nota, nom_ape=cadena[::-1].split(",")
     nombre, apellido = nom_ape.split(" ")
     return Alumno(nombre, apellido, nota)
-
-
-# cadena="zeréP nauJ,01"
-# Ejemplo = obtener_datos(cadena)
-# print(Ejemplo.nombre)
-# print(Ejemplo.apellido)
-# print(Ejemplo.nota)
-# print(Ejemplo)
-# alumno = obtener_datos(input("Introduce el nombre del archivo: "))
