@@ -3,6 +3,7 @@ import database2 as db2
 import database3 as db3
 import descomposicion as db5
 import database6 as db6
+import database7 as db7
 import helpers
 
 def iniciar():
@@ -17,7 +18,7 @@ def iniciar():
         # print("[4] Ejercicio 4 ")
         print("[5] Ejercicio 5 ")
         print("[6] Ejercicio 6 ")
-        # print("[7] Ejercicio 7 ")
+        print("[7] Ejercicio 7 ")
         print("[8] Cerrar ")
         print("===================")
         opcion = input("> ")
@@ -59,6 +60,14 @@ def iniciar():
             pares, impares = db6.separar(helpers.comprobar_lista())
             helpers.limpiar_pantalla()
             print("Lista de los pares: {}\nLista de los impares: {}".format(pares, impares))
+
+        elif opcion == '7':
+            print("Entrando al ejercicio 7...\n")
+            lista = db7.agregar_una_vez(helpers.comprobar_lista(), input("\nIntroduce el elemento que desee añadir: \n>"))
+            while helpers.pedir_entrada_si_o_no("Desea añadir otro elemento?: \n>") == True:
+                lista = db7.agregar_una_vez(lista, input("\nIntroduce el elemento que desee añadir: \n>"))
+            helpers.limpiar_pantalla()
+            print("Lista final: {}".format(lista))
 
         if opcion == '8':
             print("Saliendo...")

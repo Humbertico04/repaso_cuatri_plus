@@ -45,4 +45,12 @@ def comprobar_lista(mensaje=None):
         limpiar_pantalla()
         print("Formato incorrecto\n")
         comprobar_lista()
+
+def pedir_entrada_si_o_no(invite):
+    SI = ("s", "si", "y", "yes", "1")
+    """Por defecto, toda respuesta no comprendida será NO"""
+    try:
+        return input(invite).lower() in SI
+    except:
+        return False
     
