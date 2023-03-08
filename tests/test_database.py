@@ -1,6 +1,8 @@
 import unittest
 import database1 as db1
 import database2 as db2
+import database3 as db3
+import descomposicion as db5
 
 class TestDatabase(unittest.TestCase):
     def test_str_alumno(self):
@@ -23,6 +25,18 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(numeromag.numero_final, 555555555)
         self.assertEqual(numeromag.numero_magico, 12345679)
         self.assertEqual(numeromag.numero_usuario, 5)
+
+    def test_comparar_listas(self):
+        lista = db3.listas.comparar_listas(["h",'o','l','a',' ', 'm','u','n','d','o'], ["h",'o','l','a',' ', 'l','u','n','a'])
+        self.assertEqual(lista, ['h', 'o', 'l', 'a', ' ', 'u', 'n', 'o'])
+    
+    def test_elementos_repetidos(self):
+        lista = db3.listas.elementos_repetidos(['h', 'o', 'l', 'a', ' ', 'u', 'n', 'o'])
+        self.assertEqual(lista, ['h', 'o', 'l', 'a', ' ', 'u', 'n'])
+
+    def test_descomposicion(self):
+        lista = db5.descomposicion(248)
+        self.assertEqual(lista, "\n002\n040\n800")
 
 if __name__ == "__main__":
     unittest.main()
