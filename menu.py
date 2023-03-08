@@ -1,6 +1,7 @@
 import database1 as db1
 import database2 as db2
 import database3 as db3
+import database4 as db4
 import descomposicion as db5
 import database6 as db6
 import database7 as db7
@@ -15,7 +16,7 @@ def iniciar():
         print("[1] Ejercicio 1 ")
         print("[2] Ejercicio 2 ")
         print("[3] Ejercicio 3 ")
-        # print("[4] Ejercicio 4 ")
+        print("[4] Ejercicio 4 ")
         print("[5] Ejercicio 5 ")
         print("[6] Ejercicio 6 ")
         print("[7] Ejercicio 7 ")
@@ -48,6 +49,23 @@ def iniciar():
             lista_final = db3.listas.elementos_repetidos(lista_nueva)
             helpers.limpiar_pantalla()
             print(f"Tu lista final resultante: {lista_final}")
+
+        elif opcion == '4':
+            print("Entrando al ejercicio 4...\n")
+            tareas = []
+            tarea = db4.tareas(helpers.leer_texto(mensaje="Porfavor introduzca la tarea que desea realizar"),
+                               helpers.comprobar_numero(mensaje="Introduce la prioridad de la tarea:\n>"))
+            tareas.append((tarea.prioridad, tarea.tarea.capitalize()))
+            helpers.limpiar_pantalla()
+            while helpers.pedir_entrada_si_o_no("Desea añadir una tarea?: \n>") == True:
+                tarea = db4.tareas(helpers.leer_texto(mensaje="Porfavor introduzca la tarea que desea realizar"),
+                               helpers.comprobar_numero(mensaje="Introduce la prioridad de la tarea:\n>"))
+                tareas.append((tarea.prioridad, tarea.tarea.capitalize()))
+                helpers.limpiar_pantalla()
+            helpers.limpiar_pantalla()
+            print("Tareas ordenadas por prioridad: \n")
+            db4.tareas.ordenar_tareas(tareas)
+
 
         elif opcion == '5':
             print("Entrando al ejercicio 5...\n")

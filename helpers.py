@@ -18,10 +18,13 @@ def string_contiene(string, caracter):
         print("Formato incorrecto")
         string_contiene(leer_texto(), caracter)
 
-def comprobar_numero(min=0, max=100):
+def comprobar_numero(min=0, max=100, mensaje=None):
     while True:
         try:
-            numero_usuario = int(input("Introduce un numero entre {} y {}: \n>".format(min, max)))
+            if mensaje == None:
+                numero_usuario = int(input("Introduce un numero entre {} y {}: \n>".format(min, max)))
+            else:
+                numero_usuario = int(input(mensaje))
             if numero_usuario >= min and numero_usuario <= max:
                 return numero_usuario
             else:

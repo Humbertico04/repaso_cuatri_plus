@@ -6,7 +6,7 @@
 
 # Para ordenar automáticamente una lista es posible utilizar el método .sort(), deberias probarlo.
 
-class tareass:
+class tareas:
     def __init__(self, tarea, prioridad):
         self.tarea = tarea
         self.prioridad = prioridad
@@ -14,19 +14,21 @@ class tareass:
     def __str__(self):
         return f"{self.tarea}"
 
-def ordenar_tareas(lista_tareas):
-    # lista_tareas.sort(key=lambda tarea: tarea.prioridad)
-    lista_tareas.sort()
-    for tarea in lista_tareas:
-        print(tarea[1])
-    return lista_tareas
-tareas = [
-    (1, 'Hacer compras'),
-    (3, 'Ir al gimnasio'),
-    (2, 'Llamar al médico'),
-    (4, 'Limpiar la casa')
-]
+    @staticmethod
+    def ordenar_tareas(lista_tareas):
+        # lista_tareas.sort(key=lambda tarea: tarea.prioridad)
+        lista_tareas.sort()
+        for tarea in lista_tareas:
+            print(tarea[1])
+        return lista_tareas
 
-ordenar_tareas(tareas)
+# tareas = [
+#     (1, 'Hacer compras'),
+#     (3, 'Ir al gimnasio'),
+#     (2, 'Llamar al médico'),
+#     (4, 'Limpiar la casa')
+# ]
+
+# tareas.ordenar_tareas(tarea)
 
 
