@@ -4,6 +4,7 @@ import database2 as db2
 import database3 as db3
 import descomposicion as db5
 import database6 as db6
+import database7 as db7
 
 class TestDatabase(unittest.TestCase):
     def test_str_alumno(self):
@@ -43,6 +44,10 @@ class TestDatabase(unittest.TestCase):
         pares, impares = db6.separar([1,2,3,4,5,6,7,8,9,10])
         self.assertEqual(pares, [2,4,6,8,10])
         self.assertEqual(impares, [1,3,5,7,9])
+
+    def test_agregar_una_vez(self):
+        lista = db7.agregar_una_vez(['1', '5', '-2'], '10', '-2', "Hola")
+        self.assertEqual(lista, ['1', '5', '-2', '10', 'Hola'])
 
 if __name__ == "__main__":
     unittest.main()
