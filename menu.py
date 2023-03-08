@@ -1,6 +1,7 @@
 import database1 as db1
 import database2 as db2
 import database3 as db3
+import descomposicion as db5
 import helpers
 
 def iniciar():
@@ -13,7 +14,7 @@ def iniciar():
         print("[2] Ejercicio 2 ")
         print("[3] Ejercicio 3 ")
         # print("[4] Ejercicio 4 ")
-        # print("[5] Ejercicio 5 ")
+        print("[5] Ejercicio 5 ")
         # print("[6] Ejercicio 6 ")
         # print("[7] Ejercicio 7 ")
         print("[8] Cerrar ")
@@ -36,13 +37,21 @@ def iniciar():
         elif opcion == '3':
             print("Entrando al ejercicio 3...\n")
             lista_1 = helpers.comprobar_lista("Lista 1")
-            print("Lista 1 creada\n")
+            print("Lista 1 creada correctamente\n")
             lista_2 = helpers.comprobar_lista("Lista 2")
+            print(lista_1, lista_2)
+            input("Lista 2 creada correctamente\n>")
             print(lista_1, lista_2)
             lista_nueva = db3.listas.comparar_listas(lista_1, lista_2)
             lista_final = db3.listas.elementos_repetidos(lista_nueva)
             helpers.limpiar_pantalla()
             print(f"Tu lista final resultante: {lista_final}")
+
+        elif opcion == '5':
+            print("Entrando al ejercicio 5...\n")
+            desc = db5.descomposicion(helpers.comprobar_numero(max=float('inf')))
+            helpers.limpiar_pantalla()
+            print(f"Tu descomposicion es: {desc}")
 
         if opcion == '8':
             print("Saliendo...")
