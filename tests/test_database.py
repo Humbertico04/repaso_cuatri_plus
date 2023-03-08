@@ -2,6 +2,7 @@ import unittest
 import database1 as db1
 import database2 as db2
 import database3 as db3
+import database4 as db4
 import descomposicion as db5
 import database6 as db6
 import database7 as db7
@@ -31,10 +32,21 @@ class TestDatabase(unittest.TestCase):
     def test_comparar_listas(self):
         lista = db3.listas.comparar_listas(["h",'o','l','a',' ', 'm','u','n','d','o'], ["h",'o','l','a',' ', 'l','u','n','a'])
         self.assertEqual(lista, ['h', 'o', 'l', 'a', ' ', 'u', 'n', 'o'])
-    
+
     def test_elementos_repetidos(self):
         lista = db3.listas.elementos_repetidos(['h', 'o', 'l', 'a', ' ', 'u', 'n', 'o'])
         self.assertEqual(lista, ['h', 'o', 'l', 'a', ' ', 'u', 'n'])
+
+    def test_ordenar_tareas(self):
+        tareas = [(1, 'Hacer compras'), 
+                  (3, 'Ir al gimnasio'),
+                  (2, 'Llamar al médico'),
+                  (4, 'Limpiar la casa')]
+        tareas = db4.tareas.ordenar_tareas(tareas)
+        self.assertEqual(tareas, [(1, 'Hacer compras'),
+                                  (2, 'Llamar al médico'),
+                                  (3, 'Ir al gimnasio'),
+                                  (4, 'Limpiar la casa')])
 
     def test_descomposicion(self):
         lista = db5.descomposicion(3647)

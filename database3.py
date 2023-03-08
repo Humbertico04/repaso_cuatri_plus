@@ -20,3 +20,4 @@ class listas:
             if elemento in lista_2:
                 lista_nueva.append(elemento)
         return lista_nueva
+    

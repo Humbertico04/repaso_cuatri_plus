@@ -22,13 +22,13 @@ class tareas:
             print(tarea[1])
         return lista_tareas
 
-# tareas = [
-#     (1, 'Hacer compras'),
-#     (3, 'Ir al gimnasio'),
-#     (2, 'Llamar al médico'),
-#     (4, 'Limpiar la casa')
-# ]
+tarea = [
+    (1, 'Hacer compras'),
+    (3, 'Ir al gimnasio'),
+    (2, 'Llamar al médico'),
+    (4, 'Limpiar la casa')
+]
 
-# tareas.ordenar_tareas(tarea)
+print(tareas.ordenar_tareas(tarea))
 
 

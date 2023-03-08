@@ -19,4 +19,3 @@ def numero_magico(numero_usuario):
     numero_magico = 12345679
     numero_final = 9*numero_usuario*numero_magico
     return NumeroMagico(numero_magico, numero_usuario, numero_final)
-

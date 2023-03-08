@@ -27,5 +27,3 @@ def separar(lista):
     pares.sort()
     impares.sort()
     return pares, impares
-
-print(separar([6,5,2,1,7]))

@@ -16,6 +16,3 @@ def agregar_una_vez(lista, *args):
         else:
             lista.append('{}'.format(args))
     return lista
-
-elementos = ['1', '5', '-2']
-print(agregar_una_vez(elementos, 10, -2, "Hola"))
