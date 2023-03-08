@@ -35,8 +35,8 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(lista, ['h', 'o', 'l', 'a', ' ', 'u', 'n'])
 
     def test_descomposicion(self):
-        lista = db5.descomposicion(248)
-        self.assertEqual(lista, "\n002\n040\n800")
+        lista = db5.descomposicion(3647)
+        self.assertEqual(lista, "\n0007\n0040\n0600\n3000")
 
 if __name__ == "__main__":
     unittest.main()
