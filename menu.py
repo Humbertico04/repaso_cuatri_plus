@@ -2,6 +2,7 @@ import database1 as db1
 import database2 as db2
 import database3 as db3
 import descomposicion as db5
+import database6 as db6
 import helpers
 
 def iniciar():
@@ -15,7 +16,7 @@ def iniciar():
         print("[3] Ejercicio 3 ")
         # print("[4] Ejercicio 4 ")
         print("[5] Ejercicio 5 ")
-        # print("[6] Ejercicio 6 ")
+        print("[6] Ejercicio 6 ")
         # print("[7] Ejercicio 7 ")
         print("[8] Cerrar ")
         print("===================")
@@ -51,7 +52,13 @@ def iniciar():
             print("Entrando al ejercicio 5...\n")
             desc = db5.descomposicion(helpers.comprobar_numero(max=float('inf')))
             helpers.limpiar_pantalla()
-            print(f"Tu descomposicion es: {desc}")
+            print(f"Su descomposicion es: {desc}")
+
+        elif opcion == '6':
+            print("Entrando al ejercicio 6...\n")
+            pares, impares = db6.separar(helpers.comprobar_lista())
+            helpers.limpiar_pantalla()
+            print("Lista de los pares: {}\nLista de los impares: {}".format(pares, impares))
 
         if opcion == '8':
             print("Saliendo...")

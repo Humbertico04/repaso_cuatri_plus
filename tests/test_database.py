@@ -3,6 +3,7 @@ import database1 as db1
 import database2 as db2
 import database3 as db3
 import descomposicion as db5
+import database6 as db6
 
 class TestDatabase(unittest.TestCase):
     def test_str_alumno(self):
@@ -37,6 +38,11 @@ class TestDatabase(unittest.TestCase):
     def test_descomposicion(self):
         lista = db5.descomposicion(3647)
         self.assertEqual(lista, "\n0007\n0040\n0600\n3000")
+
+    def test_separar(self):
+        pares, impares = db6.separar([1,2,3,4,5,6,7,8,9,10])
+        self.assertEqual(pares, [2,4,6,8,10])
+        self.assertEqual(impares, [1,3,5,7,9])
 
 if __name__ == "__main__":
     unittest.main()
